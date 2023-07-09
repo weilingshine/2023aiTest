@@ -1,0 +1,23 @@
+.fullSect {
+	background: #06416D;
+	margin-top: -100px;
+	padding-top: 2rem;
+	padding-top: calc(303px + 70px);
+
+	@include b576 {
+		padding-top: calc(346px + 70px);
+		background: url("#{$indexPath}/full_bg.jpg") top center/ cover no-repeat;
+	}
+
+	@include b768 {
+		padding-top: calc(324px + 70px);
+	}
+
+	@include b992 {
+		padding-top: calc(117px + 70px);
+	}
+
+	@include b1200 {
+		padding-top: calc(140px + 70px);
+	}
+}

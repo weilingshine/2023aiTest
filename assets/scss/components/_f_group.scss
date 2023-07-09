@@ -1,0 +1,41 @@
+.fRound_check {
+  position: relative;
+  flex: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  border-radius: 50px;
+  line-height: 1;
+
+  .fRound_input {
+    position: absolute;
+    display: none;
+  }
+
+  .fRound_check_label {
+    padding: 0 24px 0 49px;
+    width: 100%;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+
+    &::before {
+      position: absolute;
+      display: block;
+      width: 24px;
+      height: 24px;
+      content: '';
+      background: var(---white);
+      border: 2px solid #3684BE;
+      border-radius: 50px;
+      left: 15px;
+      z-index: 5;
+      transition: border .25s linear;
+    }
+  }
+  
+  input[type="radio"]:checked ~ label {
+    &::before {
+      background: #3684BE url("#{$signupPath}/icon_check.svg") top center / contain no-repeat ;
+    }
+  }
+}

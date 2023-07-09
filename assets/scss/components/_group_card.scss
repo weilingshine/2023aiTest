@@ -1,0 +1,153 @@
+.group_card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	max-width: 360px;
+	margin-top: calc(128px + 60px);
+	padding: 0 18px 60px;
+	background: linear-gradient(180deg, rgba(0, 240, 255, 0.5) 0%, rgba(0, 76, 134, 0.5) 100%);
+	border-top: 1px solid #FFFFFF;
+	box-shadow: 0px 10px 30px rgba(0, 54, 95, 0.69);
+	backdrop-filter: blur(25px);
+	border-radius: 50px;
+	color: var(---white);
+
+	@include b768 {
+		width: calc(50% - 15px);
+	}
+
+	@include b1200 {
+		max-width: 400px;
+		padding: 0 40px 60px;
+	}
+
+	.group_content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.group_icon {
+		margin-top: -128px;
+		width: 198px;
+
+		@include b768 {
+			width: 168px;
+		}
+
+		@include b1200 {
+			width: 198px;
+		}
+	}
+
+	h3 {
+		position: relative;
+		display: inline-block;
+		font-weight: var(---group_card_h3_weight);
+		font-size: var(---group_card_h3);
+		letter-spacing: 0.05em;
+
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+			width: 40px;
+			height: 11px;
+			background: url("#{$indexPath}/group_adorn_01.svg") top center / contain no-repeat;
+			filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(305deg) brightness(105%) contrast(101%);
+			bottom: 10px;
+
+			@include b375 {
+				bottom: 8px;
+				width: 52px;
+				height: 15px;
+			}
+
+			@include b768 {
+				width: 44px;
+				height: 13px;
+			}
+
+			@include b1200 {
+				width: 52px;
+				height: 15px;
+			}
+		}
+
+		&::before {
+			left: -46px;
+			@include b375 {
+				left: -56px;
+			}
+
+			@include b768 {
+				left: -50px;
+			}
+
+			@include b1200 {
+				left: -56px;
+			}
+		}
+
+		&::after {
+			right: -46px;
+			@include b375 {
+				right: -56px;
+			}
+
+			@include b768 {
+				right: -50px;
+			}
+
+			@include b1200 {
+				right: -56px;
+			}
+		}
+	}
+
+	ul {
+		margin-top: 28px;
+		list-style: none;
+
+		li {
+			display: flex;
+
+			&:not(:last-child) {
+				margin-bottom: 15px;
+			}
+
+			h4 {
+				font-size: var(---group_card_ul_h4);
+				line-height: var(---group_card_ul_light);
+				font-weight: var(---group_card_ul_weight);
+				flex-shrink: 0;
+				width: 90px;
+				text-align: right;
+			}
+
+			p {
+				font-size: var(---group_card_ul_h4);
+				line-height: var(---group_card_ul_light);
+				font-weight: var(---group_card_ul_weight);
+			}
+		}
+	}
+
+	.group_btn {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-top: 28px;
+		padding-left: 10px;
+		padding-bottom: 2px;
+		background: url("#{$indexPath}/group_btn.svg") top center / contain no-repeat;
+		width: 212px;
+		height: 54px;
+		font-size: 24px;
+		color: #06416D;
+		letter-spacing: 0.5em;
+		text-decoration: none;
+	}
+}

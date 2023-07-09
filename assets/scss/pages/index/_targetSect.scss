@@ -1,0 +1,17 @@
+.targetSect {
+	margin-top: 60px;
+
+	.container {
+		padding-left: 30px;
+		padding-right: 30px;
+
+		@include b1024 {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+
+		@include b1200 {
+			max-width: 1024px;
+		}
+	}
+}

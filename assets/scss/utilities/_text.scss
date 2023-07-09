@@ -1,0 +1,88 @@
+// singup 
+.step_group {
+	margin-bottom: 10px;
+	width: 100%;
+	border-bottom: 1px solid #3684BE;
+	;
+}
+
+.content_title {
+	display: inline-block;
+	margin-bottom: 80px;
+	position: relative;
+	font-weight: 700;
+	font-size: 36PX;
+	letter-spacing: 0.05em;
+
+	&::before,
+	&::after {
+		content: '';
+		position: absolute;
+		width: 52px;
+		height: 15px;
+		background: url("#{$indexPath}/group_adorn_01.svg") top center / contain no-repeat;
+		filter: invert(16%) sepia(100%) saturate(1133%) hue-rotate(181deg) brightness(94%) contrast(96%);
+		top: 55%;
+		transform: translateY(-45%);
+
+		@include b768 {
+			width: 44px;
+			height: 13px;
+		}
+
+		@include b1024 {
+			top: unset;
+			bottom: 0;
+			transform: translateY(-50%);
+		}
+
+		@include b1200 {
+			width: 52px;
+			height: 15px;
+		}
+	}
+
+	&::before {
+		left: -56px;
+
+		@include b768 {
+			left: -50px;
+		}
+
+		@include b1200 {
+			left: -56px;
+		}
+	}
+
+	&::after {
+		right: -56px;
+
+		@include b768 {
+			right: -50px;
+		}
+
+		@include b1200 {
+			right: -56px;
+		}
+	}
+}
+
+.content_subtitle {
+	margin-bottom: 10px;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 23px;
+	color: #06416D;
+}
+
+.p_detail {
+	margin-bottom: 10px;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 20px;
+	color: #3684BE;
+	
+	a {
+		color: #3684BE;
+	}
+}

@@ -1,0 +1,165 @@
+.winnerSect {
+  .container {
+    padding-left: 30px;
+    padding-right: 30px;
+
+    @include b1024 {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+    @include b1400 {
+			max-width: 1320px;
+		}
+  }
+}
+
+.winner_content {
+  position: relative;
+  margin-top: 100px;
+  background: rgba(3, 48, 116, 0.7);
+  width: 100%;
+  padding: 0 40px;
+
+  @include b768 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: end;
+    justify-content: space-around;
+  }
+
+  @include b1024 {
+    padding: 0 50px;
+  }
+
+  &::before, &::after{
+    display: block;
+    top: 0;
+    width: 35px;
+    bottom: 0;
+    position: absolute;
+    content: '';
+    border-top: 3px solid #0CFFD2;
+    border-bottom: 3px solid #0CFFD2;
+    z-index: 5;
+  }
+
+  &::before {
+    left: 0;
+    border-left: 3px solid #0CFFD2;
+  }
+
+  &::after {
+    right: 0;
+    border-right: 3px solid #0CFFD2;
+
+  }
+
+  .winner_group {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:nth-child(2) {
+      margin-top: 90px;
+
+      @include b768 {
+        margin-bottom: 90px;
+      }
+    }
+
+    &:nth-child(3),&:nth-child(4),&:nth-child(5){
+      margin-top: 35px;
+
+      @include b768 {
+        margin-bottom: 90px;
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 70px;
+      @include b768 {
+        margin-bottom: 90px;
+      }
+    }
+
+    &:nth-child(4) {
+      @include b768 {
+        margin-bottom: 90px;
+      }
+    }
+  }
+}
+
+.winner_dateTitle {
+  display: flex;
+  margin-top: -20px;
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @include b768 {
+    align-self:flex-start;
+  }
+
+  h3 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    padding: 9px 23px;
+    letter-spacing: 0.05em;
+    color: #033074;
+    font-weight: 700;
+    font-size: 20px;
+    background: #0CFFD2;
+    border-radius: 5px;
+    z-index: 5;
+    transform: matrix(1, 0, -0.14, 0.99, 0, 0);
+    
+    &::after {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 100%;
+      background: rgba(75, 255, 244, 0.3);
+      border: 0.626752px solid #0CFFD2;
+      border-radius: 5px;
+      z-index: -1;
+      top: 5px;
+      left: -5px;
+    }
+  }
+
+  .date_line {
+    font-weight: 100;
+    padding: 0 4px;
+    color: #83A3E3;
+    font-size: 22px;
+    letter-spacing: 0.05em;
+    color: #033074;
+    z-index: 5;
+
+    @include b375 {
+      padding: 0 7px;
+    }
+  }
+  
+  .date_time {
+    font-family: $fontAgencyFb;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 23px;
+    letter-spacing: 0.15em;
+    z-index: 5;
+
+    @include b375 {
+      letter-spacing: 0.15em;
+    }
+  }
+}
+
+.winner_other {
+  transform: matrix(1, 0, -0.14, 0.99, 0, 0) scale(.9);
+}

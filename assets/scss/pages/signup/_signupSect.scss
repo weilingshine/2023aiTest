@@ -1,0 +1,349 @@
+.signupSect {
+	.container {
+		@include b1024 {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+
+		@include b1200 {
+			max-width: 1096px;
+		}
+
+		@include b1400 {
+			max-width: 1320px;
+		}
+	}
+
+	.row {
+		justify-content: center;
+	}
+
+	.adorn_block {
+		position: relative;
+		margin-top: 60px;
+		width: 100%;
+
+		@include b1400 {
+			max-width: 1096px;
+			margin-top: 72px;
+		}
+
+		&::before {
+			position: absolute;
+			content: '';
+			width: 100%;
+			padding-bottom: calc(18 / 100 * 100%);
+			top: 0;
+			background: url("#{$indexPath}/adorn_before_s.svg") top center / contain no-repeat;
+
+			@include b1024 {
+				padding-bottom: calc(21 / 736 * 100%);
+				background: url("#{$signupPath}/adorn_signup_before_m.svg") top center / contain no-repeat;
+				top: -14px;
+			}
+
+			@include b1200 {
+				padding-bottom: calc(21 / 1096 * 100%);
+				background: url("#{$signupPath}/adorn_signup_before_lg.svg") top center / contain no-repeat;
+				top: -14px;
+			}
+		}
+
+		&::after {
+			position: absolute;
+			content: '';
+			width: 100%;
+			padding-bottom: calc(15 / 100 * 100%);
+			bottom: 0;
+			background: url("#{$indexPath}/adorn_after_s.svg") bottom center / contain no-repeat;
+
+			@include b1024 {
+				padding-bottom: calc(21 / 736 * 100%);
+				background: url("#{$signupPath}/adorn_signup_after_m.svg") bottom center / contain no-repeat;
+			}
+
+			@include b1200 {
+				padding-bottom: calc(21 / 1096 * 100%);
+				background: url("#{$signupPath}/adorn_signup_after_lg.svg") bottom center / contain no-repeat;
+			}
+		}
+	}
+
+	.adorn_header {
+		position: relative;
+		width: 100%;
+		padding-bottom: calc(186 / 1000 * 100%);
+		background: #00BCD6;
+		z-index: 5;
+		overflow: overlay;
+		clip-path: polygon($path_01Tx $path_01Ty,
+			$path_02Tx $path_02Ty,
+			$path_03Tx $path_03Ty,
+			$path_04Tx $path_04Ty,
+			$path_05Tx $path_05Ty,
+			$path_06Tx $path_06Ty,
+			$path_07Tx $path_07Ty,
+			$path_08Tx $path_08Ty,
+			$path_09Tx $path_09Ty,
+			$path_10Tx $path_10Ty,
+		);
+		transform: translateZ(0);
+		backface-visibility: hidden;
+		perspective: none;
+		
+
+		@include b1024 {
+			padding-bottom: calc(80 / 736 * 100%);
+			clip-path: polygon($path_01signTxPad $path_01signTyPad,
+				$path_02signTxPad $path_02signTyPad,
+				$path_03signTxPad $path_03signTyPad,
+				$path_04signTxPad $path_04signTyPad,
+				$path_05signTxPad $path_05signTyPad,
+				$path_06signTxPad $path_06signTyPad,
+				$path_07signTxPad $path_07signTyPad,
+				$path_08signTxPad $path_08signTyPad,
+				$path_09signTxPad $path_09signTyPad,
+				$path_10signTxPad $path_10signTyPad,
+			);
+		}
+
+		@include b1200 {
+			padding-bottom: calc(80 / 1096* 100%);
+			clip-path: polygon($path_01signTxPC $path_01signTyPC,
+				$path_02signTxPC $path_02signTyPC,
+				$path_03signTxPC $path_03signTyPC,
+				$path_04signTxPC $path_04signTyPC,
+				$path_05signTxPC $path_05signTyPC,
+				$path_06signTxPC $path_06signTyPC,
+				$path_07signTxPC $path_07signTyPC,
+				$path_08signTxPC $path_08signTyPC,
+				$path_09signTxPC $path_09signTyPC,
+				$path_10signTxPC $path_10signTyPC,
+			);
+		}
+
+		&::before {
+			position: absolute;
+			content: '';
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background: #ECFAFF;
+			clip-path: polygon(calc($path_01Tx + $infoValue6px) calc($path_01Ty + $infoValue3px),
+				calc($path_02Tx + $infoValue3px) calc($path_02Ty + $infoValue6px),
+				calc($path_03Tx - $infoValue3px) calc($path_03Ty + $infoValue6px),
+				calc($path_04Tx - $infoValue3px) calc($path_04Ty + $infoValue6px),
+				calc($path_05Tx + $infoValue3px) calc($path_05Ty + $infoValue6px),
+				calc($path_06Tx + $infoValue3px) calc($path_06Ty + $infoValue6px),
+				calc($path_07Tx - $infoValue3px) calc($path_07Ty + $infoValue6px),
+				calc($path_08Tx - $infoValue6px) calc($path_08Ty + $infoValue3px),
+				calc($path_09Tx - $infoValue6px) calc($path_09Ty),
+				calc($path_10Tx + $infoValue6px) calc($path_10Ty),
+			);
+
+			@include b1024 {
+				clip-path: polygon(calc($path_01signTxPad + $infoValue6px) calc($path_01signTyPad + $infoValue3px),
+					calc($path_02signTxPad + $infoValue3px) calc($path_02signTyPad + $infoValue6px),
+					calc($path_03signTxPad - $infoValue3px) calc($path_03signTyPad + $infoValue6px),
+					calc($path_04signTxPad - $infoValue3px) calc($path_04signTyPad + $infoValue6px),
+					calc($path_05signTxPad + $infoValue3px) calc($path_05signTyPad + $infoValue6px),
+					calc($path_06signTxPad + $infoValue3px) calc($path_06signTyPad + $infoValue6px),
+					calc($path_07signTxPad - $infoValue3px) calc($path_07signTyPad + $infoValue6px),
+					calc($path_08signTxPad - $infoValue6px) calc($path_08signTyPad + $infoValue3px),
+					calc($path_09signTxPad - $infoValue6px) calc($path_09signTyPad),
+					calc($path_10signTxPad + $infoValue6px) calc($path_10signTyPad),
+				);
+			}
+
+			@include b1200 {
+				clip-path: polygon(calc($path_01signTxPC + $infoValue6px) calc($path_01signTyPC + $infoValue3px),
+					calc($path_02signTxPC + $infoValue3px) calc($path_02signTyPC + $infoValue6px),
+					calc($path_03signTxPC - $infoValue3px) calc($path_03signTyPC + $infoValue6px),
+					calc($path_04signTxPC - $infoValue3px) calc($path_04signTyPC + $infoValue6px),
+					calc($path_05signTxPC + $infoValue3px) calc($path_05signTyPC + $infoValue6px),
+					calc($path_06signTxPC + $infoValue3px) calc($path_06signTyPC + $infoValue6px),
+					calc($path_07signTxPC - $infoValue3px) calc($path_07signTyPC + $infoValue6px),
+					calc($path_08signTxPC - $infoValue6px) calc($path_08signTyPC + $infoValue3px),
+					calc($path_09signTxPC - $infoValue6px) calc($path_09signTyPC),
+					calc($path_10signTxPC + $infoValue6px) calc($path_10signTyPC),
+				);
+			}
+		}
+	}
+
+	.signup_content {
+		position: relative;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		margin-top: -2px;
+		padding: 35px 15px 30px;
+		font-size: 21px;
+		color: var(---txt_blue);
+		width: 100%;
+		background: #ECFAFF;
+		border-left: 6px solid #00BCD6;
+		border-right: 6px solid #00BCD6;
+		z-index: 10;
+
+		@include b576 {
+			padding: 35px 50px 30px;
+		}
+
+		@include b768 {
+			padding: 0 0 30px;
+		}
+
+		@include b1024 {
+			padding: 16px 0 30px;
+		}
+
+		@include b1200 {
+			padding: 20px 0 30px;
+		}
+
+		@include b1400 {
+			padding: 20px 0 30px;
+		}
+	}
+
+	.content_group {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		width: 100%;
+
+		@include b768 {
+			max-width: 400px;
+		}
+	}
+
+	.adorn_footer {
+		margin-top: -4px;
+		position: relative;
+		max-width: 100%;
+		padding-bottom: calc(186 / 1000 * 100%);
+		background: #00BCD6;
+		z-index: 5;
+		clip-path: polygon($path_01Bx $path_01By,
+			$path_02Bx $path_02By,
+			$path_03Bx $path_03By,
+			$path_04Bx $path_04By,
+			$path_05Bx $path_05By,
+			$path_06Bx $path_06By,
+			$path_07Bx $path_07By,
+			$path_08Bx $path_08By,
+			$path_09Bx $path_09By,
+			$path_10Bx $path_10By,
+			$path_11Bx $path_11By,
+			$path_12Bx $path_12By,
+		);
+		transform: translateZ(0);
+
+		@include b1024 {
+			padding-bottom: calc(80 / 736 * 100%);
+			clip-path: polygon($path_01signBxPad $path_01signByPad,
+				$path_02signBxPad $path_02signByPad,
+				$path_03signBxPad $path_03signByPad,
+				$path_04signBxPad $path_04signByPad,
+				$path_05signBxPad $path_05signByPad,
+				$path_06signBxPad $path_06signByPad,
+				$path_07signBxPad $path_07signByPad,
+				$path_08signBxPad $path_08signByPad,
+				$path_09signBxPad $path_09signByPad,
+				$path_10signBxPad $path_10signByPad,
+				$path_11signBxPad $path_11signByPad,
+				$path_12signBxPad $path_12signByPad,
+			);
+		}
+
+		@include b1200 {
+			padding-bottom: calc(80 / 1096 * 100%);
+			clip-path: polygon($path_01signBxPC $path_01signByPC,
+				$path_02signBxPC $path_02signByPC,
+				$path_03signBxPC $path_03signByPC,
+				$path_04signBxPC $path_04signByPC,
+				$path_05signBxPC $path_05signByPC,
+				$path_06signBxPC $path_06signByPC,
+				$path_07signBxPC $path_07signByPC,
+				$path_08signBxPC $path_08signByPC,
+				$path_09signBxPC $path_09signByPC,
+				$path_10signBxPC $path_10signByPC,
+				$path_11signBxPC $path_11signByPC,
+				$path_12signBxPC $path_12signByPC,
+			);
+		}
+
+		&::before {
+			position: absolute;
+			content: '';
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background: #ECFAFF;
+			clip-path: polygon(calc($path_01Bx + $infoValue6px) calc($path_01By),
+				calc($path_02Bx - $infoValue6px) calc($path_02By),
+				calc($path_03Bx - $infoValue6px) calc($path_03By - $infoValue3px),
+				calc($path_04Bx - $infoValue3px) calc($path_04By - $infoValue6px),
+				calc($path_05Bx + $infoValue3px) calc($path_05By - $infoValue6px),
+				calc($path_06Bx + $infoValue3px) calc($path_06By - $infoValue6px),
+				calc($path_07Bx - $infoValue3px) calc($path_07By - $infoValue6px),
+				calc($path_08Bx - $infoValue3px) calc($path_08By - $infoValue6px),
+				calc($path_09Bx - $infoValue3px) calc($path_09By - $infoValue6px),
+				calc($path_10Bx - $infoValue3px) calc($path_10By - $infoValue6px),
+				calc($path_11Bx + $infoValue3px) calc($path_11By - $infoValue6px),
+				calc($path_12Bx + $infoValue6px) calc($path_12By - $infoValue3px),
+			);
+
+			@include b1024 {
+				clip-path: polygon(calc($path_01signBxPad + $infoValue6px) calc($path_01signByPad),
+					calc($path_02signBxPad - $infoValue6px) calc($path_02signByPad),
+					calc($path_03signBxPad - $infoValue6px) calc($path_03signByPad - $infoValue3px),
+					calc($path_04signBxPad - $infoValue3px) calc($path_04signByPad - $infoValue6px),
+					calc($path_05signBxPad + $infoValue3px) calc($path_05signByPad - $infoValue6px),
+					calc($path_06signBxPad + $infoValue3px) calc($path_06signByPad - $infoValue6px),
+					calc($path_07signBxPad - $infoValue3px) calc($path_07signByPad - $infoValue6px),
+					calc($path_08signBxPad - $infoValue3px) calc($path_08signByPad - $infoValue6px),
+					calc($path_09signBxPad - $infoValue3px) calc($path_09signByPad - $infoValue6px),
+					calc($path_10signBxPad - $infoValue3px) calc($path_10signByPad - $infoValue6px),
+					calc($path_11signBxPad + $infoValue3px) calc($path_11signByPad - $infoValue6px),
+					calc($path_12signBxPad + $infoValue6px) calc($path_12signByPad - $infoValue3px),
+				);
+			}
+
+			@include b1200 {
+				clip-path: polygon(calc($path_01signBxPC + $infoValue6px) calc($path_01signByPC),
+					calc($path_02signBxPC - $infoValue6px) calc($path_02signByPC),
+					calc($path_03signBxPC - $infoValue6px) calc($path_03signByPC - $infoValue3px),
+					calc($path_04signBxPC - $infoValue3px) calc($path_04signByPC - $infoValue6px),
+					calc($path_05signBxPC + $infoValue3px) calc($path_05signByPC - $infoValue6px),
+					calc($path_06signBxPC + $infoValue3px) calc($path_06signByPC - $infoValue6px),
+					calc($path_07signBxPC - $infoValue3px) calc($path_07signByPC - $infoValue6px),
+					calc($path_08signBxPC - $infoValue3px) calc($path_08signByPC - $infoValue6px),
+					calc($path_09signBxPC - $infoValue3px) calc($path_09signByPC - $infoValue6px),
+					calc($path_10signBxPC - $infoValue3px) calc($path_10signByPC - $infoValue6px),
+					calc($path_11signBxPC + $infoValue3px) calc($path_11signByPC - $infoValue6px),
+					calc($path_12signBxPC + $infoValue6px) calc($path_12signByPC - $infoValue3px),
+				);
+			}
+		}
+	}
+
+	.btn_group  {
+		@include b768 {
+			margin-top: 80px;
+			margin-bottom: 46px;
+		}
+
+		.btn_submit {
+			margin-top: 80px;
+
+			@include b768 {
+				margin-top: unset;
+			}
+		}
+	}
+}

@@ -1,0 +1,37 @@
+body {
+    font-family: $fontStyle;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-weight: 400;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 ,p, figure ,ul,ol,label,span,mark {
+    font-family: $fontStyle;
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+}
+
+button {
+    outline:none;
+    
+    &:focus {
+        outline:none;
+    }
+}
+
+form {
+    width: 100%;
+}
+
+.container {
+    @include b992 {
+        max-width: 736px;
+    }
+
+    @include b1200 {
+        max-width: 1140px;
+    }
+}

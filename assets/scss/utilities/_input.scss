@@ -1,0 +1,19 @@
+.f_textarea {
+  width: 100%;
+  background: #FFFFFF;
+  border: 1px solid #3684BE;
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 23px;
+  padding: 16px 18px;
+  color: #3684BE;
+
+  &::placeholder {
+    color: rgba(54, 132, 190, 0.5);
+  }
+
+  &:focus-visible {
+    outline: unset;
+  }
+}

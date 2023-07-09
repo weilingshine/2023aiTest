@@ -1,0 +1,225 @@
+.infoSect {
+	.container {
+		padding-left: 30px;
+		padding-right: 30px;
+
+		@include b1024 {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+
+		@include b1200 {
+			max-width: 872px;
+		}
+	}
+
+	.adorn_block {
+		position: relative;
+		width: 100%;
+
+		&::before {
+			position: absolute;
+			content: '';
+			width: 100%;
+			padding-bottom: calc(18 / 100 * 100%);
+			top: 0;
+			background: url("#{$indexPath}/adorn_before_s.svg") top center / contain no-repeat;
+
+			@include b1024 {
+				padding-bottom: calc(60 / 736 * 100%);
+				background: url("#{$indexPath}/adorn_before_m.svg") top center / contain no-repeat;
+				top: -14px;
+			}
+		}
+
+		&::after {
+			position: absolute;
+			content: '';
+			width: 100%;
+			padding-bottom: calc(15 / 100 * 100%);
+			bottom: 0;
+			background: url("#{$indexPath}/adorn_after_s.svg") bottom center / contain no-repeat;
+
+			@include b1024 {
+				padding-bottom: calc(60 / 736 * 100%);
+				background: url("#{$indexPath}/adorn_after_m.svg") bottom center / contain no-repeat;
+			}
+		}
+	}
+
+	.info_content {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-top: -2px;
+		padding: 30px 14px 30px 26px;
+		font-size: 21px;
+		line-height: 40px;
+		color: var(---txt_blue);
+		width: 100%;
+		background: linear-gradient(180deg, #E3F8FF 0%, #91DFF8 103.49%);
+		border-left: 6px solid #00BCD6;
+		border-right: 6px solid #00BCD6;
+		z-index: 10;
+
+		@include b768 {
+			padding: 30px 54px 30px 66px;
+		}
+
+		@include b1024 {
+			padding: 54px 52px 62px 52px;
+		}
+
+		@include b1400 {
+			padding: 54px 121px 62px 121px;
+		}
+	}
+
+	.adorn_header {
+		position: relative;
+		width: 100%;
+		padding-bottom: calc(186 / 1000 * 100%);
+		background: #00BCD6;
+		z-index: 5;
+		clip-path: polygon($path_01Tx $path_01Ty,
+			$path_02Tx $path_02Ty,
+			$path_03Tx $path_03Ty,
+			$path_04Tx $path_04Ty,
+			$path_05Tx $path_05Ty,
+			$path_06Tx $path_06Ty,
+			$path_07Tx $path_07Ty,
+			$path_08Tx $path_08Ty,
+			$path_09Tx $path_09Ty,
+			$path_10Tx $path_10Ty,
+		);
+
+		@include b1024 {
+			padding-bottom: calc(60 / 736 * 100%);
+			clip-path: polygon($path_01TxPC $path_01TyPC,
+				$path_02TxPC $path_02TyPC,
+				$path_03TxPC $path_03TyPC,
+				$path_04TxPC $path_04TyPC,
+				$path_05TxPC $path_05TyPC,
+				$path_06TxPC $path_06TyPC,
+				$path_07TxPC $path_07TyPC,
+				$path_08TxPC $path_08TyPC,
+				$path_09TxPC $path_09TyPC,
+				$path_10TxPC $path_10TyPC,
+			);
+		}
+
+		&::before {
+			position: absolute;
+			content: '';
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background: #E3F8FF;
+			clip-path: polygon(calc($path_01Tx + $infoValue6px) calc($path_01Ty + $infoValue3px),
+				calc($path_02Tx + $infoValue3px) calc($path_02Ty + $infoValue6px),
+				calc($path_03Tx - $infoValue3px) calc($path_03Ty + $infoValue6px),
+				calc($path_04Tx - $infoValue3px) calc($path_04Ty + $infoValue6px),
+				calc($path_05Tx + $infoValue3px) calc($path_05Ty + $infoValue6px),
+				calc($path_06Tx + $infoValue3px) calc($path_06Ty + $infoValue6px),
+				calc($path_07Tx - $infoValue3px) calc($path_07Ty + $infoValue6px),
+				calc($path_08Tx - $infoValue6px) calc($path_08Ty + $infoValue3px),
+				calc($path_09Tx - $infoValue6px) calc($path_09Ty),
+				calc($path_10Tx + $infoValue6px) calc($path_10Ty),
+				);
+
+			@include b1024 {
+				clip-path: polygon(calc($path_01TxPC + $infoValue6px) calc($path_01TyPC + $infoValue3px),
+					calc($path_02TxPC + $infoValue3px) calc($path_02TyPC + $infoValue6px),
+					calc($path_03TxPC - $infoValue3px) calc($path_03TyPC + $infoValue6px),
+					calc($path_04TxPC - $infoValue3px) calc($path_04TyPC + $infoValue6px),
+					calc($path_05TxPC + $infoValue3px) calc($path_05TyPC + $infoValue6px),
+					calc($path_06TxPC + $infoValue3px) calc($path_06TyPC + $infoValue6px),
+					calc($path_07TxPC - $infoValue3px) calc($path_07TyPC + $infoValue6px),
+					calc($path_08TxPC - $infoValue6px) calc($path_08TyPC + $infoValue3px),
+					calc($path_09TxPC - $infoValue6px) calc($path_09TyPC),
+					calc($path_10TxPC + $infoValue6px) calc($path_10TyPC),
+				);
+			}
+		}
+	}
+
+	.adorn_footer {
+		margin-top: -4px;
+		position: relative;
+		width: 100%;
+		padding-bottom: calc(186 / 1000 * 100%);
+		background: #00BCD6;
+		z-index: 5;
+		clip-path: polygon($path_01Bx $path_01By,
+			$path_02Bx $path_02By,
+			$path_03Bx $path_03By,
+			$path_04Bx $path_04By,
+			$path_05Bx $path_05By,
+			$path_06Bx $path_06By,
+			$path_07Bx $path_07By,
+			$path_08Bx $path_08By,
+			$path_09Bx $path_09By,
+			$path_10Bx $path_10By,
+			$path_11Bx $path_11By,
+			$path_12Bx $path_12By,
+		);
+
+		@include b1024 {
+			padding-bottom: calc(60 / 736 * 100%);
+			clip-path: polygon($path_01BxPC $path_01ByPC,
+				$path_02BxPC $path_02ByPC,
+				$path_03BxPC $path_03ByPC,
+				$path_04BxPC $path_04ByPC,
+				$path_05BxPC $path_05ByPC,
+				$path_06BxPC $path_06ByPC,
+				$path_07BxPC $path_07ByPC,
+				$path_08BxPC $path_08ByPC,
+				$path_09BxPC $path_09ByPC,
+				$path_10BxPC $path_10ByPC,
+				$path_11BxPC $path_11ByPC,
+				$path_12BxPC $path_12ByPC,
+			);
+		}
+
+		&::before {
+			position: absolute;
+			content: '';
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background: #91DFF8;
+			clip-path: polygon(calc($path_01Bx + $infoValue6px) calc($path_01By),
+				calc($path_02Bx - $infoValue6px) calc($path_02By),
+				calc($path_03Bx - $infoValue6px) calc($path_03By - $infoValue3px),
+				calc($path_04Bx - $infoValue3px) calc($path_04By - $infoValue6px),
+				calc($path_05Bx + $infoValue3px) calc($path_05By - $infoValue6px),
+				calc($path_06Bx + $infoValue3px) calc($path_06By - $infoValue6px),
+				calc($path_07Bx - $infoValue3px) calc($path_07By - $infoValue6px),
+				calc($path_08Bx - $infoValue3px) calc($path_08By - $infoValue6px),
+				calc($path_09Bx - $infoValue3px) calc($path_09By - $infoValue6px),
+				calc($path_10Bx - $infoValue3px) calc($path_10By - $infoValue6px),
+				calc($path_11Bx + $infoValue3px) calc($path_11By - $infoValue6px),
+				calc($path_12Bx + $infoValue6px) calc($path_12By - $infoValue3px),
+			);
+
+			@include b1024 {
+				clip-path: polygon(calc($path_01BxPC + $infoValue6px) calc($path_01ByPC),
+					calc($path_02BxPC - $infoValue6px) calc($path_02ByPC),
+					calc($path_03BxPC - $infoValue6px) calc($path_03ByPC - $infoValue3px),
+					calc($path_04BxPC - $infoValue3px) calc($path_04ByPC - $infoValue6px),
+					calc($path_05BxPC + $infoValue3px) calc($path_05ByPC - $infoValue6px),
+					calc($path_06BxPC + $infoValue3px) calc($path_06ByPC - $infoValue6px),
+					calc($path_07BxPC - $infoValue3px) calc($path_07ByPC - $infoValue6px),
+					calc($path_08BxPC - $infoValue3px) calc($path_08ByPC - $infoValue6px),
+					calc($path_09BxPC - $infoValue3px) calc($path_09ByPC - $infoValue6px),
+					calc($path_10BxPC - $infoValue3px) calc($path_10ByPC - $infoValue6px),
+					calc($path_11BxPC + $infoValue3px) calc($path_11ByPC - $infoValue6px),
+					calc($path_12BxPC + $infoValue6px) calc($path_12ByPC - $infoValue3px),
+				);
+			}
+		}
+	}
+}

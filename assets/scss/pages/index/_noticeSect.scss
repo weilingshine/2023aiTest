@@ -1,0 +1,62 @@
+.noticeSect {
+	margin-top: 60px;
+
+	.container {
+		padding-left: 30px;
+		padding-right: 30px;
+
+		@include b1024 {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+
+		@include b1200 {
+			max-width: 1024px;
+		}
+	}
+
+	ol {
+		margin-top: 60px;
+		margin-left: 34px;
+
+		@include b768 {
+			margin-top: 60px;
+		}
+
+		>li {
+			list-style: decimal;
+			list-style-position: outside;
+			color: var(---white);
+			font-size: 16px;
+			line-height: 28px;
+
+			&::marker {
+				font-size: 16px;
+				color: var(---white);
+				font-weight: 500;
+				content: counter(list-item) "、";
+			}
+
+			&:not(:first-child) {
+				margin-top: 15px;
+			}
+
+			a {
+				color: var(---white);
+			}
+		}
+	}
+
+	ul {
+		list-style: disc;
+		margin-left: 20px;
+		margin-top: 15px;
+
+		li {
+			&::marker {
+				font-size: 12px;
+				color: var(---white);
+			}
+		}
+	}
+}

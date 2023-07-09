@@ -1,0 +1,195 @@
+.modal-dialog {
+  @include b576 {
+    max-width: 560px;
+  }
+}
+
+.modal_content {
+  position: relative;
+  width: 100%;
+  flex-direction: column;
+  pointer-events: auto;
+
+  &::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    padding-bottom: calc(60 / 736 * 100%);
+    background: url("#{$indexPath}/adorn_before_m.svg") top center / contain no-repeat;
+    top: -8px;
+    }
+
+  .modal_body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -1px;
+    min-height: 188px;
+    justify-content: flex-start;
+    padding: 0 58px 30px 58px;
+    font-size: 21px;
+    line-height: 40px;
+    color: var(---txt_blue);
+    width: 100%;
+    background: #ECFAFF;
+    border-left: 6px solid #00BCD6;
+    border-right: 6px solid #00BCD6;
+    z-index: 5;
+
+    h3 {
+      position: relative;
+      padding: 8px;
+      width: 100%;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 35px;
+      color: #06416D;
+      text-align: center;
+
+      &::after {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 1px;
+        bottom: 0;
+        left: 0;
+        background: linear-gradient(270deg, rgba(76, 184, 218, 0) 0%, #3C88C2 50.52%, rgba(76, 184, 218, 0) 100%);
+      }
+    }
+
+    p {
+      position: relative;
+      width: 100%;
+      margin-top: 20px;
+      text-align: center;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 28px;
+      color: #0070C4;
+
+      &:not(:last-child) {
+        padding-bottom: 20px;
+
+        &::after {
+          position: absolute;
+          content: '';
+          width: 100%;
+          height: 1px;
+          bottom: 0;
+          left: 0;
+          background: linear-gradient(270deg, rgba(76, 184, 218, 0) 0%, #3C88C2 50.52%, rgba(76, 184, 218, 0) 100%);
+        }
+      }
+    }
+
+    span {
+      color: #E1263C;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 28px;
+    }
+  }
+
+  .adorn_header {
+		position: relative;
+		width: 100%;
+		padding-bottom: calc(60 / 736 * 100%);
+		background: #00BCD6;
+		z-index: 5;
+		padding-bottom: calc(60 / 736 * 100%);
+    clip-path: polygon($path_01TxPC $path_01TyPC,
+      $path_02TxPC $path_02TyPC,
+      $path_03TxPC $path_03TyPC,
+      $path_04TxPC $path_04TyPC,
+      $path_05TxPC $path_05TyPC,
+      $path_06TxPC $path_06TyPC,
+      $path_07TxPC $path_07TyPC,
+      $path_08TxPC $path_08TyPC,
+      $path_09TxPC $path_09TyPC,
+      $path_10TxPC $path_10TyPC,
+    );
+
+		&::before {
+			position: absolute;
+			content: '';
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+      background: #ECFAFF;
+      clip-path: polygon(calc($path_01TxPC + $infoValue6px) calc($path_01TyPC + $infoValue3px),
+        calc($path_02TxPC + $infoValue3px) calc($path_02TyPC + $infoValue6px),
+        calc($path_03TxPC - $infoValue3px) calc($path_03TyPC + $infoValue6px),
+        calc($path_04TxPC - $infoValue3px) calc($path_04TyPC + $infoValue6px),
+        calc($path_05TxPC + $infoValue3px) calc($path_05TyPC + $infoValue6px),
+        calc($path_06TxPC + $infoValue3px) calc($path_06TyPC + $infoValue6px),
+        calc($path_07TxPC - $infoValue3px) calc($path_07TyPC + $infoValue6px),
+        calc($path_08TxPC - $infoValue6px) calc($path_08TyPC + $infoValue3px),
+        calc($path_09TxPC - $infoValue6px) calc($path_09TyPC),
+        calc($path_10TxPC + $infoValue6px) calc($path_10TyPC),
+      );
+		}
+	}
+
+  .adorn_footer {
+    position: relative;
+    margin-top: -3px;
+    width: 100%;
+    padding-bottom: calc(60 / 736 * 100%);
+    background: #00BCD6;
+    clip-path: polygon($path_01BxPC $path_01ByPC,
+      $path_02BxPC $path_02ByPC,
+      $path_03BxPC $path_03ByPC,
+      $path_04BxPC $path_04ByPC,
+      $path_05BxPC $path_05ByPC,
+      $path_06BxPC $path_06ByPC,
+      $path_07BxPC $path_07ByPC,
+      $path_08BxPC $path_08ByPC,
+      $path_09BxPC $path_09ByPC,
+      $path_10BxPC $path_10ByPC,
+      $path_11BxPC $path_11ByPC,
+      $path_12BxPC $path_12ByPC,
+    );
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: #ECFAFF;
+      clip-path: polygon(calc($path_01BxPC + $infoValue6px) calc($path_01ByPC),
+        calc($path_02BxPC - $infoValue6px) calc($path_02ByPC),
+        calc($path_03BxPC - $infoValue6px) calc($path_03ByPC - $infoValue3px),
+        calc($path_04BxPC - $infoValue3px) calc($path_04ByPC - $infoValue6px),
+        calc($path_05BxPC + $infoValue3px) calc($path_05ByPC - $infoValue6px),
+        calc($path_06BxPC + $infoValue3px) calc($path_06ByPC - $infoValue6px),
+        calc($path_07BxPC - $infoValue3px) calc($path_07ByPC - $infoValue6px),
+        calc($path_08BxPC - $infoValue3px) calc($path_08ByPC - $infoValue6px),
+        calc($path_09BxPC - $infoValue3px) calc($path_09ByPC - $infoValue6px),
+        calc($path_10BxPC - $infoValue3px) calc($path_10ByPC - $infoValue6px),
+        calc($path_11BxPC + $infoValue3px) calc($path_11ByPC - $infoValue6px),
+        calc($path_12BxPC + $infoValue6px) calc($path_12ByPC - $infoValue3px),
+      );
+    }
+  }
+
+  .btn_group {
+    margin-top: 15px;
+
+    @include b768 {
+      flex-direction: row;
+    }
+
+    .btn {
+      &:not(:first-child) {
+        margin-top: 15px;
+        @include b768 {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+}

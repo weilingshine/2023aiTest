@@ -1,0 +1,37 @@
+.memberSect {
+  .col_block {
+    width: 100%;
+    
+    @include b1200 {
+      width: calc(50% - 35px);
+    }
+    &:last-child {
+
+      .step_card {
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  .step_card {
+    margin-bottom: 60px;
+  }
+
+  .content_group {
+    @include b1200 {
+      max-width: 870px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+  }
+  
+  .content_title {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

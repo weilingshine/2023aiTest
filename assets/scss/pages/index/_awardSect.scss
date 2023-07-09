@@ -1,0 +1,59 @@
+.awardSect {
+	padding-top: 60px;
+
+	@include b768 {
+		padding-top: 120px;
+	}
+
+	.container {
+		padding-left: 30px;
+		padding-right: 30px;
+
+		@include b1024 {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+
+		@include b1400 {
+			max-width: 1320px;
+		}
+
+		&:first-child {
+			.row {
+				@include b1200 {
+					margin-right: auto;
+					margin-left: auto;
+					max-width: 1024px;
+				}
+			}
+		}
+
+		&:last-child {
+
+			.row {
+				justify-content: space-between;
+				margin-right: auto;
+				margin-left: auto;
+				max-width: 360px;
+
+				@include b768 {
+					max-width: unset;
+					margin-right: -15px;
+					margin-left: -15px;
+				}
+
+				@include b1200 {
+					margin-right: auto;
+					margin-left: auto;
+					max-width: 1024px;
+				}
+
+				@include b1400 {
+					margin-right: -15px;
+					margin-left: -15px;
+					max-width: 1320px;
+				}
+			}
+		}
+	}
+}

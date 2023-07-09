@@ -1,0 +1,56 @@
+footer {
+  position: relative;
+  margin-top: 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &::after {
+    content: '';
+    position: absolute;
+    height: 30px;
+    right: 0;
+    left: 0;
+    background: #00BCD6;
+    bottom: 0;
+    z-index: 0;
+  }
+
+  p {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 90px;
+    text-align: center;
+    line-height: 18px;
+    letter-spacing: 0.1em;
+    background: #00BCD6;
+    color: var(---white);
+    font-size: 14px;
+    padding: 20px 95px;
+    z-index: 5;
+    clip-path: polygon(
+    $path_01FxM $path_01FyM, 
+    $path_02FxM $path_02FyM, 
+    $path_03FxM $path_03FyM, 
+    $path_04FxM $path_04FyM, 
+    );
+    @include b576 {
+      padding: 20px 150px;
+    }
+
+    @include b768 {
+      max-width: 1024px;
+      font-size: 16px;
+      padding: 20px 180px;
+      clip-path: polygon(
+      $path_01FxPad $path_01FyPad, 
+      $path_02FxPad $path_02FyPad, 
+      $path_03FxPad $path_03FyPad, 
+      $path_04FxPad $path_04FyPad, 
+      );
+    }
+  }
+}

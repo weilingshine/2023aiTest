@@ -1,0 +1,76 @@
+.fixedSect {
+  @include b1024 {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    z-index: 500;
+    bottom: 100px;
+    right: 15px;
+  }
+
+  @include b1400 {
+    right: 40px;
+  }
+
+  @include b1700 {
+    right: 100px;
+  }
+
+  #goTop {
+    display: none;
+    position: fixed;
+    width: 44px;
+    height: 50px;
+    bottom: 100px;
+    right: 15px;
+    z-index: 500;
+
+    @include b1024 {
+      position: unset;
+      bottom: unset;
+      right: unset;
+    }
+  }
+
+  .fixed_box {
+    display: none;
+    margin-bottom: 20px;
+
+    @include b1024 {
+      display: unset;
+      display: flex;
+      flex-direction: column;
+    }
+
+    img {
+      width: 100%;
+    }
+
+    .fixed_signUp {
+      @include b1024 {
+        margin-bottom: 20px;
+        width: 102px;
+        height: 106px;
+      }
+
+      @include b1400 {
+        width: 128px;
+        height: 133px;
+      }
+    }
+    
+    .fixed_check {
+      @include b1024 {
+        width: 102px;
+        height: 115px;
+      }
+      
+      @include b1400 {
+        width: 128px;
+        height: 141px;
+      }
+    }
+  }
+}

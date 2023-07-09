@@ -1,0 +1,347 @@
+:root {
+	---white: #ffffff;
+	---txt_blue: #06416D;
+
+	// group_card
+	---group_card_h3: 36px;
+	---group_card_h3_weight: 700;
+	---group_card_ul_h4: 18px;
+	---group_card_ul_light: 26px;
+	---group_card_ul_weight: 300;
+
+	// award
+	---award_card_weight: 700;
+	---award_card_h3: 28px;
+	---award_card_pb: 48px;
+	---award_card_p: 31px;
+
+	// award small
+	---award_card_h3s: 16px;
+	---award_card_pbs: 27px;
+	---award_card_ps: 18px;
+
+	// qaSect 
+	---qa_h3: 36px;
+	---qa_h3_weigth: 700;
+	---qa_h4: 24px;
+	---qa_h4_weight: 500;
+	---qa_p: 16px;
+	---qa_p_wright: 400;
+
+	@include b768 {
+		// group_card
+		---group_card_h3: 30px;
+		---group_card_ul_h4: 15px;
+		---group_card_ul_light: 22px;
+
+		// award
+		---award_card_h3: 21px;
+		---award_card_pb: 36px;
+		---award_card_p: 24px
+	}
+
+	@include b1200 {
+		// group_card
+		---group_card_h3: 36px;
+		---group_card_ul_h4: 18px;
+		---group_card_ul_light: 26px;
+
+		// award
+		---award_card_h3: 28px;
+		---award_card_pb: 48px;
+		---award_card_p: 31px;
+
+		// award small
+		---award_card_h3s: 21px;
+		---award_card_pbs: 36px;
+		---award_card_ps: 24px;
+	}
+}
+
+// 共用文字
+$fontStyle:'Noto Sans TC',
+sans-serif,
+'微軟正黑體',
+'Microsoft JhengHei',
+'Helvetica Neue',
+Helvetica,
+Arial;
+$fontAgencyFb:'Agency FB',
+sans-serif;
+$fontKumarOne: 'Kumar One',
+cursive;
+
+// 共用圖片路徑
+$headerPath : "../img/header";
+$indexPath : "../img/index";
+$signupPath : "../img/signup";
+$popPath : "../img/pop";
+
+// index info 內框 減掉的數值
+$infoValue3px: 3px;
+$infoValue4px: 4px;
+$infoValue5px: 5px;
+$infoValue6px: 6px;
+$infoValue7px: 7px;
+$infoValue8px: 8px;
+
+// index M版 info 外框 all
+$path_01x: 0%;
+$path_02x: 7.39%;
+$path_03x: 19.66%;
+$path_04x: 23.34%;
+$path_05x: 81.15%;
+$path_06x: 86.25%;
+$path_07x: 94.8%;
+$path_08x: 100%;
+$path_09x: 100%;
+$path_10x: 95.09%;
+$path_11x: 68.02%;
+$path_12x: 60.61%;
+$path_13x: 53.31%;
+$path_14x: 47.07%;
+$path_15x: 28.16%;
+$path_16x: 18.81%;
+$path_17x: 11.08%;
+$path_18x: 0%;
+
+$path_01y: 7.2%;
+$path_02y: 0%;
+$path_03y: 0%;
+$path_04y: 3.95%;
+$path_05y: 3.95%;
+$path_06y: 0%;
+$path_07y: 0%;
+$path_08y: 7.2%;
+$path_09y: 88.6%;
+$path_10y: 93.25%;
+$path_11y: 93.25%;
+$path_12y: 87.44%;
+$path_13y: 87.44%;
+$path_14y: 93.25%;
+$path_15y: 93.25%;
+$path_16y: 100%;
+$path_17y: 100%;
+$path_18y: 93.72%;
+
+// index M版 info top
+$path_01Tx: 0%;
+$path_02Tx: 7.39%;
+$path_03Tx: 19.66%;
+$path_04Tx: 23.34%;
+$path_05Tx: 81.15%;
+$path_06Tx: 86.25%;
+$path_07Tx: 94.8%;
+$path_08Tx: 100%;
+$path_09Tx: 100%;
+$path_10Tx: 0%;
+
+$path_01Ty: 46.29%;
+$path_02Ty: 0%;
+$path_03Ty: 0%;
+$path_04Ty: 25.38%;
+$path_05Ty: 25.38%;
+$path_06Ty: 0%;
+$path_07Ty: 0%;
+$path_08Ty: 46.29%;
+$path_09Ty: 100%;
+$path_10Ty: 100%;
+
+// index M版 info bottom
+$path_01Bx: 0%;
+$path_02Bx: 100%;
+$path_03Bx: 100%;
+$path_04Bx: 95.09%;
+$path_05Bx: 68.02%;
+$path_06Bx: 60.61%;
+$path_07Bx: 53.31%;
+$path_08Bx: 47.07%;
+$path_09Bx: 28.16%;
+$path_10Bx: 18.81%;
+$path_11Bx: 11.08%;
+$path_12Bx: 0%;
+
+$path_01By: 0%;
+$path_02By: 0%;
+$path_03By: 26.82%;
+$path_04By: 56.68%;
+$path_05By: 56.68%;
+$path_06By: 19.35%;
+$path_07By: 19.35%;
+$path_08By: 56.68%;
+$path_09By: 56.68%;
+$path_10By: 100%;
+$path_11By: 100%;
+$path_12By: 59.67%;
+
+// index PC版 info top
+$path_01TxPC: 0%;
+$path_02TxPC: 3.62%;
+$path_03TxPC: 15.91%;
+$path_04TxPC: 17.43%;
+$path_05TxPC: 83.73%;
+$path_06TxPC: 85.83%;
+$path_07TxPC: 96.02%;
+$path_08TxPC: 100%;
+$path_09TxPC: 100%;
+$path_10TxPC: 0%;
+
+$path_01TyPC: 43.61%;
+$path_02TyPC: 0%;
+$path_03TyPC: 0%;
+$path_04TyPC: 23.91%;
+$path_05TyPC: 23.91%;
+$path_06TyPC: 0%;
+$path_07TyPC: 0%;
+$path_08TyPC: 43.61%;
+$path_09TyPC: 100%;
+$path_10TyPC: 100%;
+
+// index M版 info bottom
+$path_01BxPC: 0%;
+$path_02BxPC: 100%;
+$path_03BxPC: 100%;
+$path_04BxPC: 96.13%;
+$path_05BxPC: 63.29%;
+$path_06BxPC: 59.42%;
+$path_07BxPC: 51.94%;
+$path_08BxPC: 49.36%;
+$path_09BxPC: 19.42%;
+$path_10BxPC: 15.56%;
+$path_11BxPC: 5.14%;
+$path_12BxPC: 0%;
+
+$path_01ByPC: 0%;
+$path_02ByPC: 0%;
+$path_03ByPC: 31.06%;
+$path_04ByPC: 59.2%;
+$path_05ByPC: 59.2%;
+$path_06ByPC: 24.03%;
+$path_07ByPC: 24.03%;
+$path_08ByPC: 59.2%;
+$path_09ByPC: 59.2%;
+$path_10ByPC: 100%;
+$path_11ByPC: 100%;
+$path_12ByPC: 62.01%;
+
+// index M版footer
+$path_01FxM: 22.66%;
+$path_02FxM: 75.98%;
+$path_03FxM: 100%;
+$path_04FxM: 0%;
+
+$path_01FyM: 0%;
+$path_02FyM: 0%;
+$path_03FyM: 100%;
+$path_04FyM: 100%;
+
+// index Pad 版footer
+$path_01FxPad: 22.76%;
+$path_02FxPad: 76.08%;
+$path_03FxPad: 100%;
+$path_04FxPad: 0%;
+
+$path_01FyPad: 0%;
+$path_02FyPad: 0%;
+$path_03FyPad: 100%;
+$path_04FyPad: 100%;
+
+// signup pad top
+$path_01signTxPad: 0%;
+$path_02signTxPad: 4.30%;
+$path_03signTxPad: 18.86%;
+$path_04signTxPad: 20.66%;
+$path_05signTxPad: 80.71%;
+$path_06signTxPad: 83.21%;
+$path_07signTxPad: 95.28%;
+$path_08signTxPad: 100%;
+$path_09signTxPad: 100%;
+$path_10signTxPad: 0%;
+
+$path_01signTyPad: 38.75%;
+$path_02signTyPad: 0%;
+$path_03signTyPad: 0%;
+$path_04signTyPad: 21.25%;
+$path_05signTyPad: 21.25%;
+$path_06signTyPad: 0%;
+$path_07signTyPad: 0%;
+$path_08signTyPad: 38.75%;
+$path_09signTyPad: 100%;
+$path_10signTyPad: 100%;
+
+// signup pad botton
+$path_01signBxPad: 0%;
+$path_02signBxPad: 100%;
+$path_03signBxPad: 100%;
+$path_04signBxPad: 95.42%;
+$path_05signBxPad: 62.87%;
+$path_06signBxPad: 58.29%;
+$path_07signBxPad: 49.41%;
+$path_08signBxPad: 46.36%;
+$path_09signBxPad: 23.02%;
+$path_10signBxPad: 18.44%;
+$path_11signBxPad: 6.10%;
+$path_12signBxPad: 0%;
+
+$path_01signByPad: 0%;
+$path_02signByPad: 0%;
+$path_03signByPad: 38.75%;
+$path_04signByPad: 63.75%;
+$path_05signByPad: 63.75%;
+$path_06signByPad: 32.5%;
+$path_07signByPad: 32.5%;
+$path_08signByPad: 63.75%;
+$path_09signByPad: 63.75%;
+$path_10signByPad: 100%;
+$path_11signByPad: 100%;
+$path_12signByPad: 66.25%;
+
+// signup PC top
+$path_01signTxPC: 0%;
+$path_02signTxPC: 2.88%;
+$path_03signTxPC: 12.66%;
+$path_04signTxPC: 13.87%;
+$path_05signTxPC: 87.05%;
+$path_06signTxPC: 88.73%;
+$path_07signTxPC: 96.83%;
+$path_08signTxPC: 100%;
+$path_09signTxPC: 100%;
+$path_10signTxPC: 0%;
+
+$path_01signTyPC: 38.75%;
+$path_02signTyPC: 0%;
+$path_03signTyPC: 0%;
+$path_04signTyPC: 21.25%;
+$path_05signTyPC: 21.25%;
+$path_06signTyPC: 0%;
+$path_07signTyPC: 0%;
+$path_08signTyPC: 38.75%;
+$path_09signTyPC: 100%;
+$path_10signTyPC: 100%;
+
+// signup PC bottom
+$path_01signBxPC: 0%;
+$path_02signBxPC: 100%;
+$path_03signBxPC: 100%;
+$path_04signBxPC: 96.92%;
+$path_05signBxPC: 58.65%;
+$path_06signBxPC: 55.58%;
+$path_07signBxPC: 49.62%;
+$path_08signBxPC: 47.57%;
+$path_09signBxPC: 15.45%;
+$path_10signBxPC: 12.38%;
+$path_11signBxPC: 4.09%;
+$path_12signBxPC: 0%;
+
+$path_01signByPC: 0%;
+$path_02signByPC: 0%;
+$path_03signByPC: 38.75%;
+$path_04signByPC: 63.75%;
+$path_05signByPC: 63.75%;
+$path_06signByPC: 32.5%;
+$path_07signByPC: 32.5%;
+$path_08signByPC: 63.75%;
+$path_09signByPC: 63.75%;
+$path_10signByPC: 100%;
+$path_11signByPC: 100%;
+$path_12signByPC: 66.25%;

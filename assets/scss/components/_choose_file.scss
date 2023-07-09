@@ -1,0 +1,43 @@
+.choose_file {
+  position: relative;
+  display: inline-block;
+  min-width: 140px;
+  max-width: 100%;
+  padding: 13px 20px 14px 0;
+  margin-bottom: 10px;
+  background: #FFFFFF;
+  border: 1px solid #3684BE;
+  border-radius: 10px;
+
+  .choose_file_input {
+    position: relative;
+    display: none;
+  }
+  
+  .choose_file_label {
+    position: relative;
+    width: 100%;
+    padding-left: 60px;
+    z-index: 1;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 23px;
+    color: #3684BE;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+  
+    &::before {
+      position: absolute;
+      content: '';
+      width: 32px;
+      height: 32px;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: url("#{$signupPath}/icon_upload.svg") center center / contain no-repeat ;
+    }
+  }
+}

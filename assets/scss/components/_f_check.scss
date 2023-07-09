@@ -1,0 +1,41 @@
+.f_check {
+  position: relative;
+  flex: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  background: var(---white);
+  border-radius: 10px;
+  line-height: 1;
+
+  .f_input {
+    position: absolute;
+    display: none;
+  }
+
+  .f_check_label {
+    padding: 10px 24px 10px 60px;
+    width: 100%;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+
+    &::before {
+      position: absolute;
+      display: block;
+      width: 24px;
+      height: 24px;
+      content: '';
+      border: 2px solid #3684BE;
+      border-radius: 6px;
+      left: 24px;
+      z-index: 5;
+      transition: border .25s linear;
+    }
+  }
+
+  input[type="radio"]:checked ~ label {
+    &::before {
+      background: #3684BE url("#{$signupPath}/icon_check.svg") top center / contain no-repeat ;
+    }
+  }
+}

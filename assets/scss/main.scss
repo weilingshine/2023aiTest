@@ -1,0 +1,75 @@
+@charset "utf-8";
+// Google Font
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.cdnfonts.com/css/agency-fb');
+@import url('https://fonts.googleapis.com/css2?family=Kumar+One&display=swap');
+// @font-face{font-family:agency fb;font-style:normal;font-weight:700;src:local('Agency FB'),url(https://fonts.cdnfonts.com/s/14864/AGENCYB.woff) format('woff')}
+
+// 斷點
+@import './mixins/breakpoint';
+// 變數
+@import './variables/variables';
+// 基礎設定
+@import './base/normalize';
+// 物件
+@import './utilities/text';
+@import './utilities/input';
+
+// 每頁共用
+@import './layout/header';
+@import './layout/footer';
+@import './layout/fixedSec';
+@import './components/modal';
+
+// commponents
+// 各區開頭主題文字
+@import './components/title_Box';
+// 參賽組別_card
+@import './components/group_card';
+// 活動獎項_card
+@import './components/award_card';
+// Radios 方形樣式
+@import './components/f_check';
+// 上傳檔案 input group 樣式
+@import './components/choose_file';
+// 輸入連結檔案 input group 樣式
+@import './components/input_group';
+// submit cancel 樣式
+@import './components/btn_group';
+// Radios 圓形樣式
+@import './components/fRound_check';
+// select btn 樣式
+@import './components/abtn_group';
+// 得獎者 winner card 
+@import './components/winner_card';
+// ul li list 
+@import './components/list_class';
+
+// layout
+// index
+// 頭圖
+@import './pages/index/banner';
+// 共同背景
+@import './pages/index/fullSect';
+// 參賽資訊
+@import './pages/index/infoSect';
+// 參賽組別
+@import './pages/index/groupSect';
+// 活動獎項
+@import './pages/index/awardSect';
+// 問題類別
+@import './pages/index/qaSect';
+// 參賽須知
+@import './pages/index/targetSect';
+// _注意事項
+@import './pages/index/noticeSect';
+
+// signup
+// signup 基礎
+@import './pages/signup/signupSect';
+// signup 會員頁 延伸覆蓋
+@import './pages/signup/memberSect';
+
+// winner
+@import './pages/winner/winnerSec';
+@import './pages/winner/winnerNoteSect';

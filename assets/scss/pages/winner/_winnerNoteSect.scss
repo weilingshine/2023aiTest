@@ -1,0 +1,32 @@
+.winnerNoteSect{
+	margin-top: 60px;
+
+	.container {
+		padding-left: 30px;
+		padding-right: 30px;
+
+		@include b1024 {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+
+		@include b1400 {
+			max-width: 1320px;
+		}
+	}
+
+  .class_01 {
+    li {
+      border-bottom: unset;
+    }
+  }
+
+  .class_06 {
+    + p  {
+      margin-top: 0;
+      a {
+        color: var(---white);
+      }
+    }
+  }
+}

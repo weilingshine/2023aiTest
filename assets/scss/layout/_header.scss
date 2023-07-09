@@ -1,0 +1,40 @@
+.navbar_main {
+	background: rgba(6, 65, 109, 0.9);
+	.container {
+		@include b1024 {
+			padding-right: 0;
+			padding-left: 0;
+		}
+
+		@include b1200 {
+			max-width: 1024px;
+		}
+
+		@include b1400 {
+			max-width: 1320px;
+		}
+	}
+
+	.navbar-toggler-icon {
+		background: url("#{$headerPath}/navbar_toggler_icon.svg") center/ contain no-repeat;
+	}
+
+	.navbar-nav{
+		margin-top: 1rem;
+		@include b992 {
+			margin-top: 0;
+		}
+	}
+
+	a.nav-link {
+		color: var(--white);
+		font-size: 16px;
+		font-weight: 200;
+		padding: 0.7rem 1rem;
+		text-align: center;
+
+		@include b992 {
+			padding: 0.5rem 1rem;
+		}
+	}
+}

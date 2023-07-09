@@ -1,0 +1,73 @@
+.btn_group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  @include b768 {
+    flex-direction: row-reverse;
+  }
+
+  .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+    width: 232px;
+    height: 54px;
+    text-decoration: none;
+    border: none;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.15em;
+    color: var(---white);
+    background: transparent;
+
+    &:focus {
+      box-shadow:unset
+    }
+
+    &:not(:last-child) {
+      @include b768 {
+        margin-left: 30px;
+      }
+    }
+  }
+
+  .btn_submit {
+    background: url("#{$signupPath}/btn_submit.svg") top center / contain no-repeat;
+    @include b768 {
+      margin-top: unset;
+    }
+  }
+
+  .btn_cancel {
+    margin-top: 30px;
+    margin-bottom: 46px;
+    background: url("#{$signupPath}/btn_cancel.svg") top center / contain no-repeat;
+
+    @include b768 {
+      margin-top: unset;
+      margin-bottom: unset;
+    }
+  }
+
+  .btn_blue {
+    background: url("#{$popPath}/pop_grop_blue.svg") top center / contain no-repeat;
+
+    @include b768 {
+      margin-top: unset;
+    }
+  }
+
+  .btn_green {
+    background: url("#{$popPath}/pop_grop_green.svg") top center / contain no-repeat;
+    
+    @include b768 {
+      margin-top: unset;
+    }
+  }
+}
